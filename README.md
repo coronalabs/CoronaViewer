@@ -41,4 +41,4 @@ This library should appear in the "Link Binary with Libraries" build phase of yo
 
 #### Info.plist
 
-On Enterprise, if you have overridden the `CFBundleURLTypes` array in your Info.plist, then you need to make sure that a `CFBundleURLSchemes` entry exists. It should correspond to the one in `build.settings`.
+On Enterprise, if you have overridden the `CFBundleURLTypes` array in your Info.plist, then you need to make sure that a `CFBundleURLSchemes` entry exists. It should correspond to the one in [build.settings](build.settings).
