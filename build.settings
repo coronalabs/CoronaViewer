@@ -1,0 +1,28 @@
+settings =
+{
+	plugins =
+	{
+		-- key is the name passed to Lua's 'require()'
+		["plugin.viewer"] =
+		{
+			-- required
+			publisherId = "com.coronalabs",
+		},
+	},
+	iphone =
+	{
+		plist =
+		{
+			CFBundleURLTypes =
+			{
+				{
+					CFBundleURLSchemes =
+					{
+						"db-l1q0pln8qsi8qyp",	
+					}
+				}
+			}
+
+		},
+	}
+}
