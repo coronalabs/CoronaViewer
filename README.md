@@ -19,15 +19,13 @@ NOTE: Only files in this location will be synchronized with your device. The res
 
 ### Running on device
 
-Build the Corona project in this repo and install it on your device.
+Build the Corona project in this repo and install it on your device. ([Corona Enterprise](http://coronalabs.com/products/enterprise/) users, see below for additional info.)
 
 You'll be prompted with Dropbox's standard login interface:
 
 ![Dropbox Login UI iOS](README/dropbox-login-ios.png)
 
 This enables the app to synchronize with your Corona project files (i.e. files that are in the above location.)
-
-See 'Corona Enterprise' if you are using this with [Corona Enterprise](http://coronalabs.com/products/enterprise/).
 
 #### Xcode Simulator
 
