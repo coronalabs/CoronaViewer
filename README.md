@@ -8,7 +8,7 @@ NOTE: [CoronaCards](http://coronacards.com) developers should go [here](https://
 
 ### Dropbox
 
-CoronaViewer requires a [Dropbox](https://db.tt/uQgIqtPN) account. You'll need to install the Dropbox plugin on your desktop computer.
+CoronaViewer requires a [Dropbox](https://db.tt/uQgIqtPN) account. You'll also want to install Dropbox on your desktop computer so that you can sync edits from your desktop to the device.
 
 ### Where Files Go
 
