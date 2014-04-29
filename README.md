@@ -42,3 +42,18 @@ This library should appear in the "Link Binary with Libraries" build phase of yo
 #### Info.plist
 
 On Enterprise, if you have overridden the `CFBundleURLTypes` array in your Info.plist, then you need to make sure that a `CFBundleURLSchemes` entry exists. It should correspond to the one in [build.settings](build.settings).
+
+## Availability
+
+### Supported Platforms
+
+* iOS
+* Android (TBD)
+
+### Product Tiers
+
+CoronaViewer is available to the following subscriptions/tiers:
+
+* Corona SDK (Pro)
+* Corona Enterprise
+* CoronaCards — [learn more here](https://github.com/coronacards/CoronaViewer)
