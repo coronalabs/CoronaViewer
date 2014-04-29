@@ -2,6 +2,7 @@
 
 CoronaViewer lets you edit your Corona project and preview those code changes in __real-time__ on your __device__.
 
+NOTE: [CoronaCards](http://coronacards.com) users should go [here](https://github.com/CoronaCards/CoronaViewer).
 
 ## Project setup
 
