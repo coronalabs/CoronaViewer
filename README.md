@@ -54,6 +54,6 @@ On Enterprise, if you have overridden the `CFBundleURLTypes` array in your Info.
 
 CoronaViewer is available to the following subscriptions/tiers:
 
-* Corona SDK (Pro)
-* Corona Enterprise
-* CoronaCards: CoronaViewer works slightly differently. [Learn more](https://github.com/coronacards/CoronaViewer)
+* __Corona SDK (Pro)__
+* __Corona Enterprise__
+* __CoronaCards__ CoronaViewer works slightly differently. [Learn more](https://github.com/coronacards/CoronaViewer)
