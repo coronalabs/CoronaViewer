@@ -13,7 +13,7 @@ CoronaViewer requires a [Dropbox](https://db.tt/uQgIqtPN) account. You'll need t
 
 Your Corona project files (e.g. `main.lua`) should go in the following location in order to be shared:
 
-	`${DROPBOX_FOLDER}/Apps/CoronaViewer`
+	${DROPBOX_FOLDER}/Apps/CoronaViewer
 
 NOTE: Only files in this location will be synchronized with your device. The rest of your Dropbox folder is __not__ visible to CoronaViewer.
 
