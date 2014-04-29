@@ -56,4 +56,4 @@ CoronaViewer is available to the following subscriptions/tiers:
 
 * Corona SDK (Pro)
 * Corona Enterprise
-* CoronaCards — [learn more here](https://github.com/coronacards/CoronaViewer)
+* CoronaCards: CoronaViewer works slightly differently. [Learn more](https://github.com/coronacards/CoronaViewer)
