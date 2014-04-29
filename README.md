@@ -1,4 +1,4 @@
-# CoronaViewer
+# CoronaViewer (for Corona SDK/Enterprise)
 
 CoronaViewer lets you edit your Corona project and preview those code changes in __real-time__ on your __device__.
 
