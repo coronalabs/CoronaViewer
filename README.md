@@ -64,7 +64,7 @@ CoronaViewer is available to the following subscriptions/tiers:
 
 ## Limitations
 
-### `config.lua`
+### config.lua
 
 CoronaViewer uses the [config.lua](config.lua) in this project, not the one in the project you are viewing (i.e. `${DROPBOX_FOLDER}/Apps/CoronaViewer`). Therefore, you will need to modify `config.lua` if your settings differ. These include:
 
@@ -75,5 +75,4 @@ CoronaViewer uses the [config.lua](config.lua) in this project, not the one in t
 
 ### File updates
 
-Files are updated based on modification time. Therefore, you must 
-
+Files are updated based on modification time. To get the device to update the file, you must make sure the modification time is newer.
