@@ -46,6 +46,22 @@ This library should appear in the "Link Binary with Libraries" build phase of yo
 On Enterprise, if you have overridden the `CFBundleURLTypes` array in your Info.plist, then you need to make sure that a `CFBundleURLSchemes` entry exists. It should correspond to the one in [build.settings](build.settings).
 
 
+## Limitations
+
+### config.lua
+
+CoronaViewer uses the [config.lua](config.lua) in this project, not the one in the project you are viewing (i.e. `${DROPBOX_FOLDER}/Apps/CoronaViewer`). Therefore, you will need to modify `config.lua` if your settings differ. These include:
+
+* content width
+* content height
+* content scale
+* frame rate
+
+### File updates
+
+Files are updated based on modification time. To get the device to update the file, you must make sure the modification time is newer.
+
+
 ## Availability
 
 ### Supported Platforms
@@ -61,18 +77,3 @@ CoronaViewer is available to the following subscriptions/tiers:
 * __Corona Enterprise__
 * __CoronaCards__ uses a slightly different workflow. [Learn more](https://github.com/coronacards/CoronaViewer)
 
-
-## Limitations
-
-### config.lua
-
-CoronaViewer uses the [config.lua](config.lua) in this project, not the one in the project you are viewing (i.e. `${DROPBOX_FOLDER}/Apps/CoronaViewer`). Therefore, you will need to modify `config.lua` if your settings differ. These include:
-
-* content width
-* content height
-* content scale
-* frame rate
-
-### File updates
-
-Files are updated based on modification time. To get the device to update the file, you must make sure the modification time is newer.
