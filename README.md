@@ -32,6 +32,7 @@ This enables the app to synchronize with your Corona project files (i.e. files t
 
 You can also build this app for the Xcode Simulator instead of for your device.
 
+
 ## Corona Enterprise
 
 If you are using Enterprise, you will need to add `libplugin_viewer.a`. This plugin is available from the Enterprise [daily builds](http://developer.coronalabs.com/downloads/daily-builds) page (click on the "Enterprise" tab).
@@ -43,6 +44,7 @@ This library should appear in the "Link Binary with Libraries" build phase of yo
 #### Info.plist
 
 On Enterprise, if you have overridden the `CFBundleURLTypes` array in your Info.plist, then you need to make sure that a `CFBundleURLSchemes` entry exists. It should correspond to the one in [build.settings](build.settings).
+
 
 ## Availability
 
@@ -58,3 +60,20 @@ CoronaViewer is available to the following subscriptions/tiers:
 * __Corona SDK (Pro)__
 * __Corona Enterprise__
 * __CoronaCards__ uses a slightly different workflow. [Learn more](https://github.com/coronacards/CoronaViewer)
+
+
+## Limitations
+
+### `config.lua`
+
+CoronaViewer uses the [config.lua](config.lua) in this project, not the one in the project you are viewing (i.e. `${DROPBOX_FOLDER}/Apps/CoronaViewer`). Therefore, you will need to modify `config.lua` if your settings differ. These include:
+
+* content width
+* content height
+* content scale
+* frame rate
+
+### File updates
+
+Files are updated based on modification time. Therefore, you must 
+
