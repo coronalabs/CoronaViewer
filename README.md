@@ -16,7 +16,7 @@ Your Corona project files (e.g. `main.lua`) should go in the following location 
 
 	${DROPBOX_FOLDER}/Apps/CoronaViewer
 
-NOTE: Only files in this location will be synchronized with your device. The rest of your Dropbox folder is __not__ visible to CoronaViewer.
+NOTE: This folder will be created by the CoronaViewer app when first run on the device and the Dropbox authorization is approved. Do not create this folder manually, nor remove the hidden files created by Dropbox. After the Dropbox authorization is complete, you can move your Corona project files into this folder. Only files in this location will be synchronized with your device. The rest of your Dropbox folder is __not__ visible to CoronaViewer.
 
 ### Running on device
 
@@ -27,6 +27,8 @@ You'll be prompted with Dropbox's standard login interface:
 ![Dropbox Login UI iOS](README/dropbox-login-ios.png)
 
 This enables the app to synchronize with your Corona project files (i.e. files that are in the above location.)
+
+The CoronaViewer folder has now been created and you can move your Corona project files into this folder. The CoronaViewer app detect files with newer dates that are moved into this folder and syncs them with the running Corona app automatically.
 
 #### Xcode Simulator
 
@@ -48,19 +50,29 @@ On Enterprise, if you have overridden the `CFBundleURLTypes` array in your Info.
 
 ## Limitations
 
-### config.lua
+### config.lua and build.settings
 
-CoronaViewer uses the [config.lua](config.lua) in this project, not the one in the project you are viewing (i.e. `${DROPBOX_FOLDER}/Apps/CoronaViewer`). Therefore, you will need to modify `config.lua` if your settings differ. These include:
+CoronaViewer uses the [config.lua](config.lua) and [build.settings](build.settings) files in this project, not the one in the project you are viewing (i.e. `${DROPBOX_FOLDER}/Apps/CoronaViewer`). Therefore, you will need to modify `config.lua` and `build.settings` if your settings differ. These include:
 
 * content width
 * content height
 * content scale
 * frame rate
+* orientation (default and supported)
 
 ### File updates
 
-Files are updated based on modification time. To get the device to update the file, you must make sure the modification time is newer.
+Files are updated based on modification time and file size. To get the device to update the file, you must make sure the modification time is newer and the file size if different.
 
+Note: There may be a problem if you swap out project files and the "new" project contains `main.lua` and other files with the same name but with an older modification date. 
+
+### Gotchas
+
+Runtime errors during the first pass of main.lua will cause the display to show a black screen.
+
+Currently the console will not display runtime errors or print output. You should run your app in Corona simulator first to verify there are no major runtime errors.
+
+Only one project can reside in the `CoronaViewer` folder. You need to switch out all the files (except for the hidden Dropbox files) in the folder when changing projects.
 
 ## Availability
 
