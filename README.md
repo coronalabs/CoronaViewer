@@ -70,8 +70,6 @@ Note: There may be a problem if you swap out project files and the "new" project
 
 Runtime errors during the first pass of main.lua will cause the display to show a black screen.
 
-Currently the console will not display runtime errors or print output. You should run your app in Corona simulator first to verify there are no major runtime errors.
-
 Only one project can reside in the `CoronaViewer` folder. You need to switch out all the files (except for the hidden Dropbox files) in the folder when changing projects.
 
 ## Availability
