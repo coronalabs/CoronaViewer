@@ -58,7 +58,7 @@ If this happens, you can inform CoronaViewer to reset the project, thereby bypas
 
 ## Gotchas
 
-### config.lua and build.settings
+### `config.lua` and `build.settings`
 
 When running CoronaViewer, the `config.lua` and `build.settings` in your project (i.e. the files you copy into the special Dropbox folder) will __not__ be honored.
 
