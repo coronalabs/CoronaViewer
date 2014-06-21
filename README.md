@@ -37,6 +37,7 @@ The CoronaViewer app will automatically update files based on modification date.
 The file update operates by synchronizing files between the device and the special Dropbox folder on your desktop computer. During synchronization, CoronaViewer caches the files locally on the device. Files on the device are only updated the modification date of the incoming file is __newer__ than the version of the file sitting locally on the device.
 
 
+
 ## CoronaViewer Actions
 
 CoronaViewer has built-in actions that can be triggered by tapping the screen with 4 fingers (i.e. 4 simultaneous touches):
@@ -49,20 +50,13 @@ The "Relaunch" action allows you to relaunch your app in CoronaViewer similar to
 
 ### Reset Project (Switching Projects)
 
-The "Reset Project" action is useful when you are switching projects. In some situations, CoronaViewer may appear to continue to use the files from your previous project instead of the files from your next project, i.e. the files you've just copied into the Dropbox folder on your desktop computer.
+The "Reset Project" action is useful when you are switching projects, i.e. copying in files from another project into the special Dropbox folder.
 
-This can happen when a file's modification date is older than the version that's on the device, e.g. the `main.lua` from your previous project happened to be newer than the one from your next project.
+One problem that can occur when switching projects from the previous to the next, there are files which overlap in name (e.g. `main.lua`). Your next project may contain files that have an __older__ modification date than the previous files. 
+
+In this case, CoronaViewer may appear to continue to use the files from your previous project instead of the files from your next project, i.e. the files you've just copied into the Dropbox folder on your desktop computer.
 
 If this happens, you can inform CoronaViewer to reset the project, thereby bypassing the modification date mechanism described above in 'Automatic File Updates'.
-
-
-## Gotchas
-
-### `config.lua` and `build.settings`
-
-When running CoronaViewer, the `config.lua` and `build.settings` in your project (i.e. the files you copy into the special Dropbox folder) will __not__ be honored.
-
-Instead, you need to modify `config.lua` and/or `build.settings` in __this__ CoronaViewer project and then rebuild CoronaViewer so your changes take effect.
 
 
 ## Xcode Simulator
@@ -86,7 +80,7 @@ On Enterprise, if you have overridden the `CFBundleURLTypes` array in your Info.
 
 ### config.lua and build.settings
 
-CoronaViewer uses the [config.lua](config.lua) and [build.settings](build.settings) files in this project, not the one in the project you are viewing (i.e. `${DROPBOX_FOLDER}/Apps/CoronaViewer`). Therefore, you will need to modify `config.lua` and `build.settings` if your settings differ. These include:
+CoronaViewer uses the [config.lua](config.lua) and [build.settings](build.settings) files in this project, not the ones in the project you are viewing (i.e. `${DROPBOX_FOLDER}/Apps/CoronaViewer`). Therefore, you will need to modify the CoronaViewer's version of `config.lua` and `build.settings` if your settings differ. These include:
 
 * content width
 * content height
@@ -94,15 +88,22 @@ CoronaViewer uses the [config.lua](config.lua) and [build.settings](build.settin
 * frame rate
 * orientation (default and supported)
 
+You'll then need to rebuild your modified CoronaViewer project so your changes take effect.
+
+
 ### File updates
 
 Files are updated based on modification time and file size. To get the device to update the file, you must make sure the modification time is newer and the file size if different.
 
-Note: There may be a problem if you swap out project files and the "new" project contains `main.lua` and other files with the same name but with an older modification date. 
+In this situation, you should use CoronaViewer's reset action, as described in 'Reset Project' above.
 
-### Gotchas
 
-Runtime errors during the first pass of main.lua will cause the display to show a black screen.
+### Lua errors
+
+If there are Lua runtime errors in your project (e.g. in `main.lua`), CoronaViewer will display a black screen. You should check your device console for error messages.
+
+
+### One project at a time
 
 Only one project can reside in the `CoronaViewer` folder. You need to switch out all the files (except for the hidden Dropbox files) in the folder when changing projects.
 
