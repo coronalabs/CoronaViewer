@@ -1,5 +1,11 @@
 settings =
 {
+	orientation =
+	{
+		default = "portrait",
+		supported = { "portrait" },
+		-- supported = { "landscapeLeft", "landscapeRight", "portrait", "portraitUpsideDown" },
+	},
 	plugins =
 	{
 		-- key is the name passed to Lua's 'require()'
