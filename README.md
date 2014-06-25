@@ -59,6 +59,19 @@ In this case, CoronaViewer may appear to continue to use the files from your pre
 If this happens, you can inform CoronaViewer to reset the project, thereby bypassing the modification date mechanism described above in 'Automatic File Updates'.
 
 
+## Orientation and Content Scaling
+
+CoronaViewer uses the [config.lua](config.lua) and [build.settings](build.settings) files in this project, not the ones in the project you are viewing (i.e. `${DROPBOX_FOLDER}/Apps/CoronaViewer`). Therefore, you will need to modify the CoronaViewer's version of `config.lua` and `build.settings` if your settings differ. These include:
+
+* content width
+* content height
+* content scale
+* frame rate
+* orientation (default and supported)
+
+You'll then need to rebuild your modified CoronaViewer project so your changes take effect.
+
+
 ## Xcode Simulator
 
 CoronaViewer also works in the Xcode Simulator. You simply build CoronaViewer for Xcode Simulator instead of for your device.
@@ -80,16 +93,7 @@ On Enterprise, if you have overridden the `CFBundleURLTypes` array in your Info.
 
 ### config.lua and build.settings
 
-CoronaViewer uses the [config.lua](config.lua) and [build.settings](build.settings) files in this project, not the ones in the project you are viewing (i.e. `${DROPBOX_FOLDER}/Apps/CoronaViewer`). Therefore, you will need to modify the CoronaViewer's version of `config.lua` and `build.settings` if your settings differ. These include:
-
-* content width
-* content height
-* content scale
-* frame rate
-* orientation (default and supported)
-
-You'll then need to rebuild your modified CoronaViewer project so your changes take effect.
-
+CoronaViewer does __not__ use the config.lua or build.settings in your Dropbox folder. See 'Orientation and Content Scaling' above to learn more about how to control this.
 
 ### File updates
 
