@@ -10,7 +10,7 @@ NOTE: [CoronaCards](http://coronacards.com) developers should go [here](https://
 
 CoronaViewer requires a [Dropbox](https://db.tt/uQgIqtPN) account. You'll also want to install Dropbox on your desktop computer so that you can sync edits from your desktop to the device.
 
-In terms of where your project files, we'll get to that in a second. There will be a special folder that's automatically created __after__ you launch the app and then login to Dropbox from your device.
+In terms of where your project files should go, we'll get to that in a second. There will be a special folder that's automatically created __after__ you launch the app and then login to Dropbox from your device.
 
 ### Running on device
 
@@ -26,7 +26,7 @@ Once you've successfully logged in with Dropbox, a special folder will automatic
 
 	${DROPBOX_FOLDER}/Apps/CoronaViewer
 
-This is where you should copy your Corona project files should go, e.g. `${DROPBOX_FOLDER}/Apps/CoronaViewer/main.lua`.
+This is where you should copy your Corona project files, e.g. `${DROPBOX_FOLDER}/Apps/CoronaViewer/main.lua`.
 
 NOTE: Do not create this folder manually or remove the hidden files created by Dropbox. Only files in this location will be synchronized with your device. The rest of your Dropbox folder is __not__ visible to CoronaViewer.
 
@@ -34,7 +34,7 @@ NOTE: Do not create this folder manually or remove the hidden files created by D
 
 The CoronaViewer app will automatically update files based on modification date. When that happens, it will also relaunch your project.
 
-The file update operates by synchronizing files between the device and the special Dropbox folder on your desktop computer. During synchronization, CoronaViewer caches the files locally on the device. Files on the device are only updated the modification date of the incoming file is __newer__ than the version of the file sitting locally on the device.
+The file update operates by synchronizing files between the device and the special Dropbox folder on your desktop computer. During synchronization, CoronaViewer caches the files locally on the device. Files on the device are only updated based on whether the modification date of the incoming file is __newer__ than the version of the file sitting locally on the device.
 
 
 
