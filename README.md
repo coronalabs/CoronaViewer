@@ -115,6 +115,8 @@ On Enterprise, if you have overridden the `CFBundleURLTypes` array in your Info.
 
 ## Limitations
 
+Custom fonts will need to be added to the build and not to the dropbox folder.
+
 ### config.lua and build.settings
 
 CoronaViewer does __not__ use the config.lua or build.settings in your Dropbox folder. See 'Orientation and Content Scaling' above to learn more about how to control this.
