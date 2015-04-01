@@ -89,10 +89,13 @@ This library should appear in the "Link Binary with Libraries" build phase of yo
 #### Manifest.xml
 
 On Enterprise, you'll have to add the following permissions:
-* android.permission.INTERNET
-* android.permission.WRITE_EXTERNAL_STORAGE
+```xml
+<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+```
 
 You will also have to add the following activities/services:
+```xml
 <activity
 	android:name="com.dropbox.client2.android.AuthActivity"
 	android:launchMode="singleTask"
@@ -105,12 +108,24 @@ You will also have to add the following activities/services:
 	</intent-filter>
 </activity>
 <service android:name="plugin.viewer.LauncherService" />
+```
 
 ### iOS
 
 #### Info.plist
 
 On Enterprise, if you have overridden the `CFBundleURLTypes` array in your Info.plist, then you need to make sure that a `CFBundleURLSchemes` entry exists. It should correspond to the one in [build.settings](build.settings).
+
+To do this, Open Info.plist in an external text editor and add the following where appropriate:
+```xml
+<key>CFBundleURLTypes</key>
+<dict>
+	<key>CFBundleURLSchemes</key>
+	<array>
+		<string>db-l1q0pln8qsi8qyp</string>
+	</array>
+</dict>
+```
 
 
 ## Limitations
@@ -142,13 +157,13 @@ Only one project can reside in the `CoronaViewer` folder. You need to switch out
 ### Supported Platforms
 
 * iOS
-* Android
+* Android (4.2 Jelly Bean (API Level 17) and above)
 
 ### Product Tiers
 
 CoronaViewer is available to the following subscriptions/tiers:
 
-* __Corona SDK (Pro)__
+* __Corona SDK__
 * __Corona Enterprise__
 * __CoronaCards__ uses a slightly different workflow. [Learn more](https://github.com/coronacards/CoronaViewer)
 
