@@ -157,7 +157,7 @@ Only one project can reside in the `CoronaViewer` folder. You need to switch out
 ### Supported Platforms
 
 * iOS
-* Android (4.2 Jelly Bean (API Level 17) and above)
+* Android
 
 ### Product Tiers
 
