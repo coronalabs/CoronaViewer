@@ -19,6 +19,11 @@ settings =
 	{
 		plist =
 		{
+			LSApplicationQueriesSchemes =
+			{
+				"dbapi-8-emm",
+				"dbapi-2"
+			},
 			CFBundleURLTypes =
 			{
 				{
