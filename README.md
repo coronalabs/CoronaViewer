@@ -32,9 +32,9 @@ NOTE: Do not create this folder manually or remove the hidden files created by D
 
 ### Automatic File Updates
 
-The CoronaViewer app will automatically update files based on modification date(iOS) or by revision number(Androi). When that happens, it will also relaunch your project.
+The CoronaViewer app will automatically update files based on modification date (iOS) or by revision number (Android). When that happens, it will also relaunch your project.
 
-The file update operates by synchronizing files between the device and the special Dropbox folder on your desktop computer. During synchronization, CoronaViewer caches the files locally on the device. Files on the device are only updated based on whether the modification date of the incoming file is __newer__ than the version of the file sitting locally on the device.
+The file update operates by synchronizing files between the device and the special Dropbox folder on your desktop computer. During synchronization, CoronaViewer caches the files locally on the device. Files on the device are only updated based on whether the modification date of the incoming file is __newer__ than the version of the file sitting locally on the device.  Make sure that the date and time are set identically on your desktop computer and device (automatic setting is best).
 
 
 
@@ -80,7 +80,7 @@ CoronaViewer also works in the Xcode Simulator. You simply build CoronaViewer fo
 
 ## Corona Enterprise
 
-If you are using Enterprise, you will need to add `libplugin_viewer.a`(iOS) or the jar files(Android). This plugin is available from the Enterprise [daily builds](http://developer.coronalabs.com/downloads/daily-builds) page (click on the "Enterprise" tab).
+If you are using Enterprise, you will need to add `libplugin_viewer.a` (iOS) or the jar files (Android). This plugin is available from the Enterprise [daily builds](http://developer.coronalabs.com/downloads/daily-builds) page (click on the "Enterprise" tab).
 
 This library should appear in the "Link Binary with Libraries" build phase of your app's Xcode project.
 
@@ -134,13 +134,13 @@ Custom fonts will need to be added to the build and not to the dropbox folder.
 
 ### config.lua and build.settings
 
-CoronaViewer does __not__ use the config.lua or build.settings in your Dropbox folder. See 'Orientation and Content Scaling' above to learn more about how to control this.
+CoronaViewer does __not__ use the `config.lua` or `build.settings` in your Dropbox folder. See 'Orientation and Content Scaling' above to learn more about how to control this.
 
 ### File updates
 
-Files are updated based on modification time and file size. To get the device to update the file, you must make sure the modification time is newer and the file size if different.(iOS)
+Files are updated based on modification time and file size. To get the device to update the file, you must make sure the modification time is newer and the file size if different (iOS).
 
-In this situation, you should use CoronaViewer's reset action, as described in 'Reset Project' above.
+If this becomes an issue, you should use CoronaViewer's reset action, as described in 'Reset Project' above.
 
 
 ### Lua errors
